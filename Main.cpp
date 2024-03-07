@@ -10,5 +10,9 @@ int main()
 
 	game.Init;
 
+	game.Run;
+
+
+
 	return 0;
 }

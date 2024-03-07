@@ -19,6 +19,11 @@ public:
 
 	//Functions
 	void Description() const;
+	void SetItem(Item* item);
+	void SetNorth(Room* room);
+	void SetSouth(Room* room);
+	void SetEast(Room* room);
+	void SetWest(Room* room);
 
 	//Variables
 	String name;
