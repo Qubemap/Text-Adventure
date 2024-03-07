@@ -10,9 +10,16 @@ public:
 	//Constructors
 	BoxOfDonuts();
 
+	//Destructor
+	~BoxOfDonuts();
+
 	//Functions
 	void Description() const;
 	void Use();
+
+	//Variables
+
+	int amountOfDonuts;
 
 
 };

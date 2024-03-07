@@ -2,6 +2,7 @@
 #define GAME_HPP
 
 #include <iostream>
+#include "String.hpp"
 
 class Game
 {
@@ -14,6 +15,7 @@ public:
 	~Game();
 
 	//Functions
+	void Init();
 
 	void Run();
 };

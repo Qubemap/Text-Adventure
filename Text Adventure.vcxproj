@@ -127,8 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BoxOfDonuts.cpp" />
     <ClCompile Include="BoxOfDonuts.hpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Room.cpp" />
     <ClCompile Include="String.cpp" />
     <ClCompile Include="tutemain.cpp" />
   </ItemGroup>
@@ -138,7 +142,8 @@
     <ClInclude Include="Game.hpp" />
     <ClInclude Include="Item.hpp" />
     <ClInclude Include="Player.hpp" />
-    <ClInclude Include="String.h" />
+    <ClInclude Include="Room.hpp" />
+    <ClInclude Include="String.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

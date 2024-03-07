@@ -1,6 +1,8 @@
 #ifndef ITEM_HPP
 #define ITEM_HPP
 
+#include "Game.hpp"
+
 class Item
 {
 public:
