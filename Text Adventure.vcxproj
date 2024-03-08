@@ -130,7 +130,7 @@
     <ClCompile Include="BoxOfDonuts.cpp" />
     <ClCompile Include="BoxOfDonuts.hpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GITBRANCHFILE.cpp" />
+    <ClCompile Include="renamegitfile.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Room.cpp" />
