@@ -10,6 +10,11 @@ Room::Room()
 {
 	name = "Room";
 	description = "This is a room";
+	north = NULL;
+	south = NULL;
+	east = NULL;
+	west = NULL;
+	item = NULL;
 
 }
 
@@ -53,5 +58,31 @@ void Room::SetWest(Room* room)
 void Room::SetItem(Item* item)
 {
 	this->item = item;
+}
+
+void Room::Description()
+{
+	std::cout << name.CStr() << std::endl;
+	std::cout << description.CStr() << std::endl;
+	if (item != NULL)
+	{
+		std::cout << "There is a " << item->name.CStr() << " here." << std::endl;
+	}
+	if (north != NULL)
+	{
+		std::cout << "There is a door to the north." << std::endl;
+	}
+	if (south != NULL)
+	{
+		std::cout << "There is a door to the south." << std::endl;
+	}
+	if (east != NULL)
+	{
+		std::cout << "There is a door to the east." << std::endl;
+	}
+	if (west != NULL)
+	{
+		std::cout << "There is a door to the west." << std::endl;
+	}
 }
 

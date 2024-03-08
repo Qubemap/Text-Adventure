@@ -18,7 +18,7 @@ public:
 	~Room();
 
 	//Functions
-	void Description() const;
+	void Description();
 	void SetItem(Item* item);
 	void SetNorth(Room* room);
 	void SetSouth(Room* room);

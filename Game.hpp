@@ -15,7 +15,6 @@ public:
 	~Game();
 
 	//Functions
-	void Init();
 
 	void Run();
 };

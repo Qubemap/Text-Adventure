@@ -1,18 +1,17 @@
 #include <iostream>
 #include "BoxOfDonuts.hpp"
+#include "Item.hpp"
 
 //Default constructor
 BoxOfDonuts::BoxOfDonuts()
 {
-	std::cout "BoxOfDonuts created" << std::endl;
-
 	amountOfDonuts = 6;
 }
 
 //destructor
 BoxOfDonuts::~BoxOfDonuts()
 {
-	std::cout "BoxOfDonuts destroyed" << std::endl;
+
 }
 
 //function
@@ -28,7 +27,7 @@ void BoxOfDonuts::Use()
 	amountOfDonuts--;
 }
 
-void BoxOfDonuts::Description()
+void BoxOfDonuts::Description() const 
 {
 	if (amountOfDonuts == 0)
 	{

@@ -1,8 +1,9 @@
-#define PLAYER_HPP
 #ifndef PLAYER_HPP
+#define PLAYER_HPP
 
 #include <iostream>
 #include "Game.hpp"
+#include "Room.hpp"
 
 class Player
 {
@@ -11,17 +12,16 @@ class Player
 
 	//Constructors
 	Player();
-	Player(std::string name, std::string description, Room* currentRoom);
 
 	//Destructor
 	~Player();
 
 	//Functions
-	void Description() const;
+	void Move(Room* room);
+	
+	//spells stuff here 
 
 	//Variables
-	std::string name;
-	std::string description;
 	Room* currentRoom;
 };
 
