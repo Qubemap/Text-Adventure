@@ -13,7 +13,7 @@ Room::Room()
 
 }
 
-Room::Room(String name, String description)
+Room::Room(const char* name, const char* description)
 {
 	this->name = name;
 	this->description = description;

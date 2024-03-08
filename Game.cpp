@@ -28,13 +28,11 @@ void Game::Init()
 	BoxOfDonuts donuts;
 
 	//create the rooms
-	String name("Dungeon Cell");
-	String description("You are in a dark, damp cell. There is a door to the north."); // !!!! There has got to be a better way of doing this
-	Room room1(name, description);
+	
+	Room room1("Dungeon Cell", "You are in a damp cold cell. Light trickles in through a barred window.");
+	Room room2("Dungeon Hall", "A long hallway.");
 
-	String name2("Dungeon Hallway");
-	String description2("You are in a long, dark hallway. There are doors to the north and south.");
-	Room room2(String str1("Dungeon Hallway"), String str2("You are in a long, dark hallway. There are doors to the north and south."));
+	
 
 	room1.SetNorth(&room2);
 	

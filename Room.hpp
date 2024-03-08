@@ -11,7 +11,7 @@ public:
 
 	//Constructors
 	Room();
-	Room(String name, String description);
+	Room(const char* name, const char* description);
 
 
 	//Destructor
