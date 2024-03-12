@@ -6,24 +6,8 @@
 class Item
 {
 public:
-
-	//Constructors
-	Item();
-
-	Item(const char* name, const char* description);
-
-	//Destructor
-	~Item();
-
-
-	//Functions
-	virtual void Description() const;
-
-	virtual void Use();
-
-	//Variables
-	String name;
-	String description;
+	virtual void Description() const = 0;
+	virtual void Use() = 0;
 };
 
 #endif

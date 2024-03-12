@@ -14,8 +14,8 @@ public:
 	~BoxOfDonuts();
 
 	//Functions
-	void Description() const;
-	void Use();
+	void Description() const override;
+	void Use() override;
 
 	//Variables
 

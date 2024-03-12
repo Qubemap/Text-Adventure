@@ -37,6 +37,9 @@ void Game::Run()
 	room1.SetNorth(&room2);
 	room2.SetSouth(&room1);
 
+	BoxOfDonuts bod;
+	room1.SetItem(&bod);
+
 	//set the player's starting room
 	player.Move(&room1);
 
