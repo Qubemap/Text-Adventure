@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "String.hpp"
+#include "Player.hpp"
 
 class Game
 {
@@ -15,7 +16,9 @@ public:
 	~Game();
 
 	//Functions
-
+	void Move(Player& player, String direction);
+	String GetCommand(String Input);
+	String GetArgs(String args);
 	void Run();
 };
 

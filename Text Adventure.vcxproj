@@ -130,7 +130,6 @@
     <ClCompile Include="BoxOfDonuts.cpp" />
     <ClCompile Include="BoxOfDonuts.hpp" />
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Item.cpp" />
     <ClCompile Include="Lamp.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Player.cpp" />

@@ -6,6 +6,7 @@
 BoxOfDonuts::BoxOfDonuts()
 {
 	amountOfDonuts = 6;
+	name = "Box of Donuts";
 }
 
 //destructor
@@ -36,7 +37,7 @@ void BoxOfDonuts::Description() const
 	}
 	else if (amountOfDonuts == 1)
 	{
-		std::cout << "A box of donuts. There is " << amountOfDonuts << " donut left" << std::endl;
+		std::cout << "A box of donuts. There is 1 donut left" << std::endl;
 		return;
 	}
 	std::cout << "A box of donuts. There are " << amountOfDonuts << " donuts left" << std::endl;

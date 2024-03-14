@@ -2,6 +2,7 @@
 #define BOXOFDONUTS_HPP
 
 #include "Item.hpp"
+#include "Game.hpp"
 
 class BoxOfDonuts : public Item
 {
