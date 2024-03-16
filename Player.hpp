@@ -5,6 +5,8 @@
 #include "Game.hpp"
 #include "Room.hpp"
 
+class Room;
+
 class Player
 {
 

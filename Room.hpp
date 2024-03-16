@@ -5,6 +5,8 @@
 #include "Game.hpp"
 #include "Item.hpp"
 
+class Item;
+
 class Room
 {
 public:

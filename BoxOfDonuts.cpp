@@ -32,13 +32,13 @@ void BoxOfDonuts::Description() const
 {
 	if (amountOfDonuts == 0)
 	{
-		std::cout << "An empty box of donuts" << std::endl;
+		std::cout << "There is an empty box of donuts here." << std::endl;
 		return;
 	}
 	else if (amountOfDonuts == 1)
 	{
-		std::cout << "A box of donuts. There is 1 donut left" << std::endl;
+		std::cout << "There is a box of donuts here. There is 1 donut left" << std::endl;
 		return;
 	}
-	std::cout << "A box of donuts. There are " << amountOfDonuts << " donuts left" << std::endl;
+	std::cout << "There is a box of donuts here. There are " << amountOfDonuts << " donuts left" << std::endl;
 }

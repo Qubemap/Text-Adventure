@@ -5,6 +5,8 @@
 #include "String.hpp"
 #include "Player.hpp"
 
+class Player;
+
 class Game
 {
 public:
@@ -17,9 +19,8 @@ public:
 
 	//Functions
 	void Move(Player& player, String direction);
-	String GetCommand(String Input);
-	String GetArgs(String args);
 	void Run();
+
 };
 
 #endif

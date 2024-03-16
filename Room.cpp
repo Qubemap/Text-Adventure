@@ -66,7 +66,7 @@ void Room::Description()
 	std::cout << description.CStr() << std::endl;
 	if (item != NULL)
 	{
-		std::cout << "There is a " << item->name.CStr() << " here." << std::endl;
+		item->Description();
 	}
 	if (north != NULL)
 	{
