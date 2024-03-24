@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="BoxOfDonuts.cpp" />
     <ClCompile Include="BoxOfDonuts.hpp" />
+    <ClCompile Include="Cat.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Lamp.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -138,6 +139,7 @@
     <ClCompile Include="tutemain.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cat.hpp" />
     <ClInclude Include="Character.hpp" />
     <ClInclude Include="Entity.hpp" />
     <ClInclude Include="Game.hpp" />
