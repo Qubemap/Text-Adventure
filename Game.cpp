@@ -8,6 +8,9 @@
 #include "Lamp.hpp"
 #include "String.hpp"
 #include "Cat.hpp"
+#include <vector>
+#include <algorithm>
+#include "Spell.hpp"
 
 //constructor
 
@@ -21,6 +24,36 @@ Game::Game()
 Game::~Game()
 {
 	
+}
+
+//binary search function to find a spell
+std::vector<Spell>::iterator Game::binarySearch(const String& name)
+{
+	int start_index = 0;
+	int end_index = spells.size() - 1;
+
+	while (start_index <= end_index)
+	{
+		int pivot = (start_index + end_index) / 2; 
+		if (spells[pivot].name == name) // found it!
+		{
+			return spells.begin() + pivot;
+		}
+		else if (name < spells[pivot].name) // search left
+		{
+			end_index = pivot - 1;
+		}
+		else // search right
+		{
+			start_index = pivot + 1;
+		}
+	}
+	return spells.end(); // Not found. returns one position past the end of the vector.
+}
+
+bool Game::compareSpells(const Spell& a, const Spell& b)
+{
+	return a.name < b.name; //sorts the spells alphabetically, by comparing the names of the spells using the overloaded < operator.
 }
 
 //function to run the game
@@ -43,6 +76,19 @@ void Game::Run()
 	room2.SetWest(&room4);
 	room4.SetEast(&room2);
 
+	//create spell book
+	spells.push_back(Spell("eclipse")); //fun fact, for a while some of my test cases started with a capital letter
+	spells.push_back(Spell("eruption")); //issue is, i made the search tolowered
+	spells.push_back(Spell("levitate")); //making it fucking impossible to find these
+	spells.push_back(Spell("mirage")); //Took an unreasonable amount of time to figure out
+	spells.push_back(Spell("petrify"));
+	spells.push_back(Spell("frostbite"));
+	spells.push_back(Spell("polymorph"));
+	spells.push_back(Spell("teleport"));
+	spells.push_back(Spell("thunderwave"));
+	spells.push_back(Spell("vortex"));
+
+	std::sort(spells.begin(), spells.end(), Game::compareSpells); //I had to make compareSpells static
 
 	//set items in rooms
 	Item* item = new BoxOfDonuts();
@@ -145,9 +191,25 @@ void Game::Run()
 				std::cout << "There is nothing to use" << std::endl;
 			}	
 		}
+		else if (input.Find("cast") != -1)
+		{
+			std::cout << "what spell would you like to cast?" << std::endl;
+			String spellName;
+			spellName.ReadFromConsole();
+			spellName.ToLower();
+			std::vector<Spell>::iterator it = binarySearch(spellName.CStr());
+			if (it != spells.end())
+			{
+				std::cout << "You cast " << it->name.CStr() << std::endl;
+			}
+			else
+			{
+				std::cout << "Klaatu... Barada... Necktie. You don't know that spell" << std::endl;
+			}
+		}
 		else
 		{
-			std::cout << "I don't understand. try 'Move (direction)', 'use', or 'look'." << std::endl;
+			std::cout << "Invalid input. Try 'Move (direction)', 'use', 'look', 'cast' or 'quit'." << std::endl;
 		}
 
 		std::cout << std::endl;

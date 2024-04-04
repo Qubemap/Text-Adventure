@@ -25,6 +25,8 @@ class Player
 
 	//Variables
 	Room* currentRoom;
+
+
 };
 
 

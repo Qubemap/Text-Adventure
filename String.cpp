@@ -240,7 +240,7 @@ String& String::WriteToConsole()
 //OPERATORS
 
 //Returns true if the strings are equal
-bool String::operator==(const String& _other)
+bool String::operator==(const String& _other) const
 {
 	if (strcmp(str, _other.str) == 0)
 	{
@@ -289,7 +289,7 @@ const char& String::operator[](size_t index) const
 }
 
 //Returns true if first (non-matching) is 
-bool String::operator<(const String& other)
+bool String::operator<(const String& other) const
 {
 	if (strcmp(str, other.str) < 0) //strcmp returns a negative number if the first string is less than the second
 	{
